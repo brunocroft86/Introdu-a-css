@@ -1,0 +1,44 @@
+
+h2 {
+    text-decoration: underline;
+}
+
+p {
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 20px;
+    vertical-align: baseline;
+    color:black;
+    font-size: 16;
+    
+    
+    
+}
+.exemplo{
+    background-color: rgb(69, 251, 251);
+    font-weight: bold;
+    font-size:16px ;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+code{
+    background-color: antiquewhite;
+    font-size: 22px;
+}
+
+.language-html, {
+    display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  font-size:16px;
+}
+.pre{
+    font-size: 16px;
+}
+.span, .language-css{
+    font-size: 16px;
+    font-weight: bold;
+}
+

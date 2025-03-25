@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Manual do CSS</title>
+</head>
+<body>
+    <DIV class="introducaocs">
+        <h2 class="INTRODUÇÃOCSS
+        ">INTRODUÇÃO AO CSS</h2>
+        <P class="paragrafos">
+            CSS, uma abreviação de Cascading Style Sheets, é a linguagem que usamos para estilizar um arquivo HTML e dizer ao navegador como ele deve renderizar os elementos na página.
+    
+    <p>Neste livro, falo exclusivamente sobre como estilizar documentos HTML, embora o CSS também possa ser usado para estilizar outras coisas.</p>
+    <p>Arquivos CSS contém várias regras do CSS.</p>
+
+    <p>Cada regra é composta por 2 partes:</p>
+        
+    
+        <H3>O seletor</H3>
+    <P>O seletor é uma string que identifica um ou mais elementos da página, seguindo uma sintaxe especial sobre a qual falaremos em breve.</P>
+    
+    <H3>O bloco de declaração</H3>
+    <P>O bloco de declaração contém uma ou mais declarações, por sua vez compostas por uma propriedade e um valor.</P>
+    <P>Essas são todas as coisas que temos em CSS.</p>
+    
+       <p> Organizar cuidadosamente as propriedades, associando-as a valores e anexando-as a elementos específicos da página usando um seletor é todo o argumento deste artigo.</P>
+    
+        <H2>Qual a aparência do CSS</H2>
+        <P>Um conjunto de regras em CSS tem uma parte chamada seletor e a outra chamada declaração. A declaração contém várias regras, cada uma composta por uma propriedade e um valor.</p>
+    
+           <p> Neste exemplo, p é o seletor e aplica uma regra que define o valor 20px para a propriedade font-size:</P>
+    
+            <pre class="language-css" tabindex="0"><code class="language-css"><span class="token selector">p</span> <span class="token punctuation">{</span>
+                <span class="token property">font-size</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+              <span class="token punctuation">}</span></code></pre>
+    
+              <p>Várias regras são empilhadas uma após a outra:</p>
+    
+              <pre class="language-css" tabindex="0"><code class="language-css"><span class="token selector">p</span> <span class="token punctuation">{</span>
+                <span class="token property">font-size</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+              
+              <span class="token selector">a</span> <span class="token punctuation">{</span>
+                <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+              <span class="token punctuation">}</span></code></pre>
+    
+              <p>Um seletor pode ter como destino um ou mais itens:</p>
+    
+              <pre class="language-css" tabindex="0"><code class="language-css"><span class="token selector">p, a</span> <span class="token punctuation">{</span>
+                <span class="token property">font-size</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+              <span class="token punctuation">}</span></code></pre>
+    
+              <p>e pode selecionar tags HTML, como acima, ou elementos do HTML que contêm um determinado atributo de classe, usando .minha-classe ou elementos HTML que possuem um atributo id específico, usando #meu-id.</p>
+    
+               <p> Seletores mais avançados permitem que você escolha itens cujo atributo corresponde a um valor específico, ou também itens que respondem a pseudoclasses (falaremos mais sobre isso depois).</p>
+    
+                <h2>Ponto e vírgula</h2>
+                <p>Cada regra do CSS termina com um ponto e vírgula. O ponto e vírgula não é opcional, exceto após a última regra. Sugiro, porém, usá-lo sempre para consistência e para evitar erros caso você adicione outra propriedade e se esqueça de colocar o ponto e vírgula na linha anterior.</p>
+    
+                <h2>Formatação e recuo</h2>
+                <p>Não existe uma regra fixa para formatação. Este CSS é válido:</p>
+    
+                <pre class="language-css" tabindex="0"><code class="language-css"><span class="token selector">p</span>
+                    <span class="token punctuation">{</span>
+                <span class="token property">font-size</span><span class="token punctuation">:</span>           20px   <span class="token punctuation">;</span>
+                                    <span class="token punctuation">}</span>
+                                    
+              <span class="token selector">a</span><span class="token punctuation">{</span><span class="token property">color</span><span class="token punctuation">:</span>blue<span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre>
+    
+              <p>Ele é, porém, muito complicado de se ver. Atenha-se a algumas convenções, como as que você vê nos exemplos acima: coloque os seletores e as chaves de fechamento à esquerda, recue 2 espaços para cada regra, use a chave de abertura na mesma linha do seletor, separando os dois por um espaço.</p>
+              <p>O uso correto e consistente de espaçamento e recuo é uma ajuda visual para entender seu código.</p>
+    
+              <h2 class="UMA BREVE HISTÓRIA DO CSS">UMA BREVE HISTÓRIA DO CSS</h2>
+              <p>Antes de prosseguir, quero fazer uma breve recapitulação da história do CSS.</p>
+    
+                <p>O CSS surgiu da necessidade de estilizar páginas da web. Antes da introdução do CSS, as pessoas queriam uma maneira de estilizar suas páginas da web, que pareciam muito semelhantes e "acadêmicas" naquela época. Você não podia fazer muito em termos de personalização.</p>
+                
+                <p>O HTML 3.2 introduziu a opção de definir cores incorporadas como atributos de elemento HTML e tags de apresentação, como center e font, mas isso escalou rapidamente para uma situação longe do ideal.</p>
+                
+                <p>O CSS nos permite mover tudo relacionado à apresentação do HTML para o CSS, para que o HTML possa voltar a ser o formato que define a estrutura do documento, em vez de como as coisas devem se parecer no navegador.</p>
+                
+                <p>O CSS está evoluindo continuamente. O CSS que você usou há 5 anos pode estar desatualizado, pois novas técnicas idiomáticas do CSS surgiram e os navegadores mudaram.</p>
+                
+               <p>É difícil imaginar quando o CSS nasceu e como a web era diferente.</p>
+                
+               <p> Na época, tínhamos vários navegadores concorrentes, sendo os principais o Internet Explorer e o Netscape Navigator.</p>
+                
+                <p>As páginas eram estilizadas usando HTML, com tags de apresentação especiais, como bold (negrito) e atributos especiais, a maioria dos quais, agora, está obsoleta.</p>
+                
+                <p>Isso significava que você tinha uma quantidade limitada de oportunidades de personalização.</p>
+                
+                <p>A maior parte das decisões de estilo foram deixadas para o navegador.</p>
+                
+               <p> Além disso, você construía um site especificamente para um dos navegadores, porque cada um introduzia tags diferentes e não padrão para dar mais poder e oportunidades.</p>
+                
+                <p>Logo, as pessoas perceberam a necessidade de um modo de estilizar as páginas, para que funcionassem em todos os navegadores.</p>
+                
+                <p>Após a ideia inicial proposta em 1994, o CSS teve seu primeiro lançamento em 1996, quando foi publicada a recomendação CSS Nível 1 ("CSS 1").</p>
+                
+                <p>CSS Nível 2 ("CSS 2") foi publicado em 1998.</p>
+                
+                <p>Desde então, o trabalho começou no nível 3 do CSS. O CSS Working Group decidiu dividir cada recurso e trabalhar neles separadamente, em módulos.</p>
+                
+                <p>Os navegadores não eram especialmente rápidos na implementação do CSS. Tivemos que esperar até 2002 para que o primeiro navegador implementasse a especificação CSS completa: o Internet Explorer para Mac, conforme bem descrito neste artigo do CSS Tricks (em inglês).</p>
+                
+                <p>O Internet Explorer implementou o modelo de caixas incorretamente desde o início, o que fez com que levasse anos de trabalho até se conseguir ter o mesmo estilo aplicado consistentemente em todos os navegadores. Tivemos que usar vários truques e hacks para fazer os navegadores renderizarem as coisas como queríamos.</p>
+                
+                <p>Hoje, as coisas estão muito, muito melhores. Podemos apenas usar os padrões do CSS sem pensar em peculiaridades, na maioria das vezes. O CSS nunca foi tão poderoso.</p>
+                
+               <p> Não temos mais números oficiais de lançamento do CSS agora, mas o CSS Working Group lança um "snapshot" dos módulos que atualmente são considerados estáveis ​​e prontos para serem incluídos nos navegadores. Este é o snapshot mais recente, de fevereiro de 2023.</p>
+                
+                <p>O CSS Nível 3 é a base para o CSS que escrevemos hoje. Temos muitos outros recursos construídos sobre ele.</p>
+    
+                <h2>ADICIONANDO CSS A UMA PÁGINA HTML</h2>
+                <p>O CSS pode ser anexado a uma página HTML de diferentes maneiras.</p>
+    
+                <h2>1: Usando a tag link</h2>
+                <p>A tag link é uma maneira de incluir um arquivo CSS. Esta é a maneira preferida de usar o CSS do modo como ele deve ser usado: um arquivo CSS é incluído em todas as páginas do seu site e a alteração de uma linha desse arquivo afeta a apresentação de todas as páginas do site.</p>
+    
+                    <p>Para usar esse método, adicione uma tag link com o atributo href apontando para o arquivo CSS que deseja incluir. Você o adiciona dentro da tag head do site (não dentro da tag body):</p>
+    
+                    <pre class="language-html" tabindex="0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>arquivo.css<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span></code></pre>
+    
+    
+                    <p>O atributo <code>rel</code> também é necessário, pois informa ao navegador que tipo de arquivo estamos vinculando.</p>
+    
+                    <h2>2: Usando a tag <code>style</code></h2>
+    
+                    <p>Em vez de usar a tag <code>link</code> para apontar para uma folha de estilo separada contendo nosso CSS, podemos adicionar o CSS diretamente dentro de uma tag style. Esta é a sintaxe:</p>
+    
+                    <pre tabindex="0"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span>
+                        ...nosso CSS...
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt; </span></span></code></pre>
+    
+                        <p>Usando este método, podemos evitar a criação de um arquivo CSS separado. Acho que esta é uma boa maneira de experimentar antes de "formalizar" o CSS em um arquivo separado ou adicionar uma linha especial de CSS apenas a um arquivo</p>
+
+                        <h2>3: Estilos inline</h2>
+                        <p>Os estilos inline são a terceira maneira de adicionar CSS a uma página. Podemos adicionar um atributo style a qualquer tag HTML e adicionar CSS a ela.</p>
+
+                        <pre><code>&lt;div style=""&gt;...&lt;/div&gt;</code></pre>
+
+                        <p>Exemplo:</p>
+                        <pre class="language-html" tabindex="0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>background-color: yellow<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+                        <h2>SELETORES</h2>
+                        <p>Um seletor permite associar uma ou mais declarações a um ou mais elementos da página.</p>
+
+                        <h2>Seletores básicos</h2>
+                        <p>Suponha que temos um elemento p na página e queremos exibir as palavras nele usando a cor amarela.</p>
+
+                        <p>Podemos segmentar esse elemento usando este seletor p, que segmenta todos os elementos usando a tag p na página. Uma regra CSS simples para conseguir o que queremos é:</p>
+
+                        <p>Podemos segmentar (target) esse elemento usando este seletor p, que marca todos os elementos usando a tag p na página. Uma regra CSS simples para conseguir o que queremos é:</p>
+
+                        <pre class="language-css" tabindex="0"><code class="language-css"><span class="token selector">p</span> <span class="token punctuation">{</span>
+                            <span class="token property">color</span><span class="token punctuation">:</span> yellow<span class="token punctuation">;</span>
+                          <span class="token punctuation">}</span></code></pre>
+
+                        
+
+                          <p>Cada tag HTML possui um seletor correspondente, por exemplo: div, span, img.</p>
+
+                          <p>e um seletor corresponder a vários elementos, todos os elementos da página serão afetados pela alteração.</p>
+
+                        <p>Os elementos HTML possuem 2 atributos que são muito usados ​​dentro do CSS para associar estilo a um elemento específico da página: class e id.</p>
+
+                        <p>Há uma grande diferença entre os dois: dentro de um documento HTML, você pode repetir o mesmo valor class em vários elementos, mas só pode usar um id uma vez. Dessa forma, usando classes você pode selecionar um elemento com 2 ou mais nomes de classe específicos, algo que não é possível usando ids.</p>
+
+                        <p>As classes são identificadas usando o símbolo ., enquanto ids usando o símbolo #.</p>
+
+                        <p>Exemplo usando uma classe:</p>
+
+                        
+                      
+
+
+
+                        
+
+
+                        
+
+
+    
+    
+    
+    
+    </DIV
+</body>
+    
+
+</html>
